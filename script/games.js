@@ -41,3 +41,15 @@ let games = {
         size : 10611589
     }
 }
+
+
+let mainGame = document.querySelector('.games__item-image');
+    body = document.querySelector('.container');
+
+
+mainGame.addEventListener("click", function(){
+    body.className = "container__black";
+})
+
+
+
