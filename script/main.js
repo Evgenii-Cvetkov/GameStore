@@ -26,6 +26,18 @@ function mainGameImage() {
   let mainImage = document.querySelector(".games__item-image__main");
   mainImage.innerHTML = games[0].cover.img;
 }
+const showDescr = document.querySelector('.games__item-link_main');
+const otherGames = document.querySelector('.other__games')
+showDescr.addEventListener('click', () => {
+  otherGames.classList.toggle('other__games_hide')
+})
+
+let shoeDescription = function() {
+  if (otherGames.classList.contains('other__games_hide')) {
+    
+  }
+
+}
 
 mainGameTitle()
 mainGamePrice()
