@@ -39,13 +39,16 @@ showDescr.addEventListener('click', () => {
   otherGames.classList.toggle('other__games_hide')
 })
 
-let out ='';
-for (i = 1; i < 5; i++) {
-  out += '<img class="other__game-image" src="' + games[i].cover + '">'
+function addOtherGames () {
+  let out ='';
+  for (i = 1; i < 5; i++) {
+    out += '<img class="other__game-image" src="' + games[i].cover + '">'
+  }
+  otherGames.innerHTML = out;
 }
-otherGames.innerHTML = out;
 
 mainGameTitle()
 mainGamePrice()
 mainGameImage()
+addOtherGames()
 footer()

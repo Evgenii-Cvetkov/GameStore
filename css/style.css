@@ -67,6 +67,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: .3s linear;
   opacity: .6;
 }
+/* #first-game-container:hover img {
+  max-height: 388px;
+} */
 
 .games__container {
   display: flex;
