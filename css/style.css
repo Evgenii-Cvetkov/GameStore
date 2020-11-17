@@ -86,9 +86,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .other__games {
-  display: flex;
-  width: 500px;
-  max-height: 250px;
+  display: block;
+  max-width: 500px;
 }
 .other__game-image{
   width: auto;
