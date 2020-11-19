@@ -10,7 +10,7 @@ let header = document.getElementById("header"),
     otherGames = document.querySelector('.other__games')
 
 
-header.insertAdjacentHTML("afterbegin", "<div class=container><h1 class=main__title>Jeka game store</h1></div>");
+  header.insertAdjacentHTML("afterbegin", "<div class=container><h1 class=main__title>Jeka game store</h1></div>");
 
 
 
@@ -34,10 +34,19 @@ function mainGameImage() {
   mainImage.innerHTML = games[0].cover;
  };
 
+function otherGamesToggle() {
+    otherGames.classList.toggle('other__games_hide')
+}
 
-showDescr.addEventListener('click', () => {
-  otherGames.classList.toggle('other__games_hide')
-})
+function addDescription() {
+  let addDescr = document.querySelector('.main__game-description');
+  addDescr.classList.toggle('main__game-description_hide')
+  addDescr.innerHTML = games[0].description;
+}
+
+showDescr.addEventListener('click', otherGamesToggle),
+showDescr.addEventListener('click', addDescription)
+
 
 function addOtherGames () {
   let out ='';
@@ -47,6 +56,16 @@ function addOtherGames () {
   otherGames.innerHTML = out;
 }
 
+// let showGameDescr = document.querySelector('.game__description')
+// function showDescription(otherGames) {
+//   if (otherGames.classList.contains("other__games_hide")) {
+//     showGameDescr.classList.add("game__description_open")
+//   } else {
+//     null
+//   }
+// } 
+
+otherGamesToggle()
 mainGameTitle()
 mainGamePrice()
 mainGameImage()
