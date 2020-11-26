@@ -4,10 +4,18 @@ let header = document.getElementById("header"),
     images = container.getElementsByTagName("img");
     firstGameImage = images[0],
     gamesItemTitle = container.getElementsByClassName('.games__item-title'),
-    gameDescr = document.querySelector(".gameDescr"),
+    gameDescr = document.querySelector(".game__description"),
     firstGameImage.src = firstGame.cover;
     showDescr = document.querySelector('.games__item-link_main');
-    otherGames = document.querySelector('.other__games')
+    otherGames = document.querySelector('.other__games'),
+    showDescription = document.querySelector('.main__game-description');
+    mainImage = document.querySelector('.games__item-image_main'),
+    mainContainer = document.querySelector('.games__container'),
+    gameTitle = document.querySelector('.game__title'),
+    price = document.querySelector('.game__price'),
+    size = document.querySelector('.game__size'),
+    btn = document.querySelector('.btn')
+    
 
 
   header.insertAdjacentHTML("afterbegin", "<div class=container><h1 class=main__title>Jeka game store</h1></div>");
@@ -30,24 +38,18 @@ function footer() {
 };
 
 function mainGameImage() {
-  let mainImage = document.querySelector(".games__item-image_main");
   mainImage.innerHTML = games[0].cover;
  };
 
-function otherGamesToggle() {
-    otherGames.classList.toggle('other__games_hide')
+
+function hideContainer() {
+  mainContainer.style.display = "none",
+  showDescription.style.display = "flex"
 }
-
-function addDescription() {
-  let addDescr = document.querySelector('.main__game-description');
-  addDescr.classList.toggle('main__game-description_hide')
-  addDescr.innerHTML = games[0].description;
+function showContainer() {
+  mainContainer.style.display = "flex",
+  showDescription.style.display = "none"
 }
-
-showDescr.addEventListener('click', otherGamesToggle),
-showDescr.addEventListener('click', addDescription)
-
-
 function addOtherGames () {
   let out ='';
   for (i = 1; i < 5; i++) {
@@ -55,19 +57,28 @@ function addOtherGames () {
   }
   otherGames.innerHTML = out;
 }
+function mainGameDescription () {
+  gameDescr.innerHTML = games[0].description;
+}
+function showGameTitle() {
+  gameTitle.innerHTML = games[0].title;
+}
+function gamePrice() {
+  price.innerHTML = `${games[0].price} RUR`;
+}
+function gameSize() {
+  size.innerHTML = `${games[0].size} MB`;
+}
 
-// let showGameDescr = document.querySelector('.game__description')
-// function showDescription(otherGames) {
-//   if (otherGames.classList.contains("other__games_hide")) {
-//     showGameDescr.classList.add("game__description_open")
-//   } else {
-//     null
-//   }
-// } 
+showDescr.addEventListener('click', hideContainer),
+btn.addEventListener('click', showContainer)
 
-otherGamesToggle()
 mainGameTitle()
 mainGamePrice()
 mainGameImage()
 addOtherGames()
 footer()
+mainGameDescription()
+showGameTitle()
+gamePrice()
+gameSize()
