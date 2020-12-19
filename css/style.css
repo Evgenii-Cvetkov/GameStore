@@ -149,3 +149,27 @@ h1, h2, h3, h4, h5, h6 {
   display: inline;
   list-style-type: none;
 }
+
+/* axtox styles */
+
+section.games-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  max-width: 1300px;
+  width: 100%;
+}
+section.games-list .game:nth-child(1) {
+  order: 0;
+  flex: 0 1 100%;
+  align-self: stretch;
+}
+
+section.games-list .game {
+  order: 0;
+  flex: 0 1 50%;
+  align-self: stretch;
+}
