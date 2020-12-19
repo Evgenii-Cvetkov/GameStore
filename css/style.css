@@ -154,22 +154,44 @@ h1, h2, h3, h4, h5, h6 {
 
 section.games-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: stretch;
   align-items: stretch;
   max-width: 1300px;
-  width: 100%;
+  width: 500px;
+  height: 508px;
+  margin: 0 auto;
 }
 section.games-list .game:nth-child(1) {
   order: 0;
   flex: 0 1 100%;
   align-self: stretch;
+  width: 500px;
 }
 
 section.games-list .game {
   order: 0;
   flex: 0 1 50%;
   align-self: stretch;
+}
+
+section.games-list .game > img {
+  width:100%;
+  height:100%;
+}
+
+.game {
+  position: relative;
+
+}
+
+.game:hover {
+  
+}
+
+.price {
+  position: absolute;
+
 }
