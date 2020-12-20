@@ -1,20 +1,20 @@
-let gamesSection = document.querySelector("section.games-list");
-let description = document.querySelector("section.games-list");
+let gamesSection = document.querySelector('section.games-list');
+let description = document.querySelector('section.games-list');
 
 function createGameTemplate(game) {
-    let gameTemplate = document.createElement("div");
-    gameTemplate.classList.add("game");
+    let gameTemplate = document.createElement('div');
+    gameTemplate.classList.add('game');
     
-    let image = document.createElement("img");
+    let image = document.createElement('img');
     image.src = game.cover;
 
-    let price = document.createElement("div");
+    let price = document.createElement('div');
     price.innerHTML = game.price;
-    price.classList.add("price")
+    price.classList.add('price')
  
-    let title = document.createElement("div");
+    let title = document.createElement('div');
     title.innerHTML = game.title;
-    title.classList.add("title")
+    title.classList.add('title')
 
     let hoverInfo = document.createElement('div')
     hoverInfo.classList.add('hover-info')
