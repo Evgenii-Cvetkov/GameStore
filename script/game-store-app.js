@@ -24,30 +24,26 @@ function createGameTemplate(game) {
 
     gameTemplate.appendChild(image);
     gameTemplate.appendChild(hoverInfo)
+    gameTemplate.addEventListener("click", function() { createGameDescription(game) }); 
 
     return gameTemplate;
 }
 
-//function loadGames() {
-    games.forEach(game => {
-        let template = createGameTemplate(game);
-        gamesSection.appendChild(template);
-    });
-//}
-
-//window.addEventListener('load', loadGames);
+games.forEach(game => {
+    let template = createGameTemplate(game);
+    gamesSection.appendChild(template);
+});
 
 function createGameDescription(game){
-  let gameSize = document.querySelector('.game__size')
-  gameSize.innerHTML = `${(games[0].size/1024/1024).toFixed(2)} GB`
-
-  let gamePrice = document.querySelector('.game__price')
-  gamePrice.innerHTML = `${games[0].price.toFixed(2)} RUR`
-
-  let description = document.querySelector('.game__descr')
-  description.innerHTML = games[0].description
-
+    let gameSize = document.querySelector('.game__size')
+    gameSize.innerHTML = `${(game.size/1024/1024).toFixed(2)} GB`
+  
+    let gamePrice = document.querySelector('.game__price')
+    gamePrice.innerHTML = `${game.price.toFixed(2)} RUR`
+  
+    let description = document.querySelector('.game__descr')
+    description.innerHTML = game.description
 }
 
-createGameDescription()
+//createGameDescription()
 console.log(games);

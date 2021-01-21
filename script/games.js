@@ -1,6 +1,7 @@
 // DO NOT CHANGE THIS FILE!
 let games = [
     {
+        id : 1,
         title : "Одни из нас. Часть II",
         cover : "images/covers/last-of-us-2.jpg",
         price : 4499.00,
@@ -9,6 +10,7 @@ let games = [
         size : 103850967
     },
     {
+        id : 2,
         title : "God of War",
         cover : "images/covers/god-of-war.jpg",
         price : 1999.00,
@@ -17,6 +19,7 @@ let games = [
         size : 44323307
     },
     {
+        id : 3,
         title : "UNCHARTED™ 4: Путь вора",
         cover : "images/covers/uncharted-4.jpg",
         price : 1199.00,
@@ -25,6 +28,7 @@ let games = [
         size : 49922703
     },
     {
+        id : 4,
         title : "Horizon Zero Dawn™ Complete Edition",
         cover : "images/covers/horizon.jpg",
         price : 1199.00,
@@ -33,6 +37,7 @@ let games = [
         size : 49125785
     },
     {
+        id : 5,
         title : "Dead Space™ 2",
         cover : "images/covers/dead-space-2.jpg",
         price : 899.00,
