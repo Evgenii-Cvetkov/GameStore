@@ -23,6 +23,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: blue;
   padding-top: 40px;
   padding-bottom: 50px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
 }
 .main__title {
   font-weight: 900;
@@ -100,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 .other__games_hide {
   display: none;
 }
-.main__game-description {
+.game__description {
   background: #343446;
   color: #fff;
   display: block;
@@ -110,7 +113,15 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 10px;
   justify-content: space-between;
   margin: 0 auto;
+  max-width: 1140px;
+  border: 2px #000 solid;
+  padding: 5px;
 }
+
+.game__descr {
+  max-width: 900px;
+}
+
 
 .game__info {
   margin-left: 30px;
@@ -119,10 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 .game__title {
   font-size: 30px;
 }
-.game__description{
-  border: 2px #000 solid;
-  padding: 5px;
-}
+
 .game__nums {
   text-align: right;
 }

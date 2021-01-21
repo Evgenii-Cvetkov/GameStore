@@ -1,5 +1,4 @@
 let gamesSection = document.querySelector('section.games-list');
-let description = document.querySelector('section.games-list');
 
 function createGameTemplate(game) {
     let gameTemplate = document.createElement('div');
@@ -7,6 +6,7 @@ function createGameTemplate(game) {
     
     let image = document.createElement('img');
     image.src = game.cover;
+    image.classList.add('game__image')
 
     let price = document.createElement('div');
     price.innerHTML = game.price;
@@ -36,3 +36,18 @@ function createGameTemplate(game) {
 //}
 
 //window.addEventListener('load', loadGames);
+
+function createGameDescription(game){
+  let gameSize = document.querySelector('.game__size')
+  gameSize.innerHTML = `${(games[0].size/1024/1024).toFixed(2)} GB`
+
+  let gamePrice = document.querySelector('.game__price')
+  gamePrice.innerHTML = `${games[0].price.toFixed(2)} RUR`
+
+  let description = document.querySelector('.game__descr')
+  description.innerHTML = games[0].description
+
+}
+
+createGameDescription()
+console.log(games);
