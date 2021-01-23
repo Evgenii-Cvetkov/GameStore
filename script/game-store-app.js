@@ -35,8 +35,6 @@ function createGameTemplate(game) {
          showDescription();
     }); 
 
-    let button = document.querySelector('btn')
-
     btn.addEventListener("click", function() {
       hideDescription();
       showGamesList()
