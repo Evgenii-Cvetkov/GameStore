@@ -35,6 +35,7 @@ games.forEach(game => {
 });
 
 function createGameDescription(game){
+
     let gameSize = document.querySelector('.game__size')
     gameSize.innerHTML = `${(game.size/1024/1024).toFixed(2)} GB`
   
@@ -43,7 +44,10 @@ function createGameDescription(game){
   
     let description = document.querySelector('.game__descr')
     description.innerHTML = game.description
-}
 
-//createGameDescription()
+    let mainImage = document.querySelector('.main__image');
+    mainImage.src = game.cover;
+  }
+
+
 console.log(games);

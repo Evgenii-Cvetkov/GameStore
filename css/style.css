@@ -49,6 +49,9 @@ h1, h2, h3, h4, h5, h6 {
 .games__item-main {
  display: flex;
 }
+.games-list active {
+  display: none;
+}
 
 .games__item-info {
   position: absolute;
@@ -117,6 +120,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px #000 solid;
   padding: 5px;
 }
+
 
 .game__descr {
   max-width: 900px;
