@@ -1,5 +1,6 @@
 let gamesSection = document.querySelector('section.games-container');
 let descriptionSection = document.querySelector('section.game__active');
+let btn = document.querySelector('.btn')
 
 
 function createGameTemplate(game) {
@@ -34,6 +35,12 @@ function createGameTemplate(game) {
          showDescription();
     }); 
 
+    let button = document.querySelector('btn')
+
+    btn.addEventListener("click", function() {
+      hideDescription();
+      showGamesList()
+    });
     return gameTemplate;
 }
 
