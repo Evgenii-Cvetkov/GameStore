@@ -1,4 +1,6 @@
-let gamesSection = document.querySelector('section.games-list');
+let gamesSection = document.querySelector('section.games-container');
+let descriptionSection = document.querySelector('section.game__active');
+
 
 function createGameTemplate(game) {
     let gameTemplate = document.createElement('div');
@@ -24,17 +26,27 @@ function createGameTemplate(game) {
 
     gameTemplate.appendChild(image);
     gameTemplate.appendChild(hoverInfo)
-    gameTemplate.addEventListener("click", function() { createGameDescription(game) }); 
+    gameTemplate.addEventListener("click", function() {
+         hideGamesList();
+
+         fillGameDescription(game) 
+
+         showDescription();
+    }); 
 
     return gameTemplate;
 }
 
-games.forEach(game => {
-    let template = createGameTemplate(game);
-    gamesSection.appendChild(template);
-});
+function showGamesList() {
+    gamesSection.hidden = false;
+}
 
-function createGameDescription(game){
+function hideGamesList() {
+    gamesSection.hidden = true;
+}
+
+
+function fillGameDescription(game) {
 
     let gameSize = document.querySelector('.game__size')
     gameSize.innerHTML = `${(game.size/1024/1024).toFixed(2)} GB`
@@ -47,7 +59,19 @@ function createGameDescription(game){
 
     let mainImage = document.querySelector('.main__image');
     mainImage.src = game.cover;
-  }
+}
+
+function showDescription() {
+    descriptionSection.hidden = false;
+}
+
+function hideDescription() {
+    descriptionSection.hidden = true;
+}
 
 
-console.log(games);
+let gamesList = gamesSection.querySelector(".games-list");
+games.forEach(game => {
+    let template = createGameTemplate(game);
+    gamesList.appendChild(template);
+});
