@@ -61,6 +61,9 @@ function fillGameDescription(game) {
 
     let mainImage = document.querySelector('.main__image');
     mainImage.src = game.cover;
+
+    let pegiInfo = document.querySelector('.pegi-image')
+    pegiInfo.src = game.pegi
 }
 
 function showDescription() {
