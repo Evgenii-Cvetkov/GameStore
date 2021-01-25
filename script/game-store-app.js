@@ -1,6 +1,6 @@
-let gamesSection = document.querySelector('section.games-container');
+let gamesSection = document.querySelector('section.games__container');
 let descriptionSection = document.querySelector('section.game__active');
-let btn = document.querySelector('.btn')
+let returnButton = document.querySelector('.btn__return')
 
 
 function createGameTemplate(game) {
@@ -20,7 +20,7 @@ function createGameTemplate(game) {
     title.classList.add('title')
 
     let hoverInfo = document.createElement('div')
-    hoverInfo.classList.add('hover-info')
+    hoverInfo.classList.add('hover__info')
 
     hoverInfo.appendChild(price);
     hoverInfo.appendChild(title);
@@ -34,11 +34,6 @@ function createGameTemplate(game) {
 
          showDescription();
     }); 
-
-    btn.addEventListener("click", function() {
-      hideDescription();
-      showGamesList()
-    });
     return gameTemplate;
 }
 
@@ -50,8 +45,10 @@ function hideGamesList() {
     gamesSection.hidden = true;
 }
 
-
 function fillGameDescription(game) {
+
+    let gameTitle = document.querySelector('.game__title')
+    gameTitle.innerHTML = game.title
 
     let gameSize = document.querySelector('.game__size')
     gameSize.innerHTML = `${(game.size/1024/1024).toFixed(2)} GB`
@@ -74,9 +71,17 @@ function hideDescription() {
     descriptionSection.hidden = true;
 }
 
-
-let gamesList = gamesSection.querySelector(".games-list");
+let gamesList = gamesSection.querySelector(".games__list");
 games.forEach(game => {
     let template = createGameTemplate(game);
     gamesList.appendChild(template);
 });
+
+function backToMainPage() {
+  returnButton.addEventListener("click", function() {
+    hideDescription();
+    showGamesList()
+  });
+}
+
+backToMainPage()

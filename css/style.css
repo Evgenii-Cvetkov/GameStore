@@ -28,62 +28,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-#first-game-container {
-  font-weight: bold;
-  position: relative;
-}
-
-
-.games__item-info {
-  position: absolute;
-  bottom: 8px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  font-size: 30px;
-  color: #fff;
-  background-color: rgb(10, 63, 236);
-  display: block;
-  width: 100%;
-  opacity: 0;
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
-  text-transform: uppercase;
-}
-
-#first-game-container:hover > .games__item-info {
-  transition: .3s linear;
-  opacity: .6;
-}
-
-.footer {
-  background-color: rgb(10, 63, 236);
-  height: 102px;
-}
-
-.footer__text{
-  text-align: right;
-  color: #fff; 
-  padding-top: 40px;
-  font-size: 10px;
-}
-
 .game__description {
   background: #343446;
   color: #fff;
   display: block;
-  border: 2px solid #000;
   padding-left: 10px;
-  min-height: calc(100vh - 289px);
   padding-top: 10px;
   justify-content: space-between;
   margin: 0 auto;
+  margin-top: 30px;
   max-width: 1140px;
-  border: 2px #000 solid;
   padding: 5px;
 }
-
 
 .game__info {
   margin-left: 30px;
@@ -96,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 .game__nums {
   text-align: right;
 }
-.btn {
+.btn__return {
   box-shadow:inset 0px 16px 6px -8px #29bbff;
 	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
 	background-color:#2dabf9;
@@ -108,15 +64,15 @@ h1, h2, h3, h4, h5, h6 {
 	font-size:20px;
 	padding:5px 42px;
 	text-decoration:none;
-	text-shadow:0px 0px 12px #263666;
+  text-shadow:0px 0px 12px #263666;
+  margin-top: 30px;
 }
-.btn:hover {
+.btn__return:hover {
 	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
 	background-color:#0688fa;
 }
 
-
-.games-list {
+.games__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -127,30 +83,29 @@ h1, h2, h3, h4, h5, h6 {
   height: 508px;
   margin: 100px auto;
 }
-.games-list .game:nth-child(1) {
+.games__list .game:nth-child(1) {
   order: 0;
   flex: 0 1 100%;
   align-self: stretch;
   width: 500px;
 }
 
-.games-list .game {
+.games__list .game {
   order: 0;
   flex: 0 1 50%;
   align-self: stretch;
 }
 
-.games-list .game > img {
+.games__list .game > img {
   width:100%;
   height:100%;
 }
-
 
 .game {
   position: relative;
 }
 
-.hover-info {
+.hover__info {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
@@ -164,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-.game:hover > .hover-info{
+.game:hover > .hover__info{
   opacity: .6;
   transition: linear .2s ;
 }
