@@ -64,6 +64,9 @@ function fillGameDescription(game) {
 
     let pegiInfo = document.querySelector('.pegi-image')
     pegiInfo.src = game.pegi
+
+    let trailer = document.querySelector('.trailer__video')
+    trailer.src = game.trailer
 }
 
 function showDescription() {
