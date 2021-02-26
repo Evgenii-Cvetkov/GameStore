@@ -2,6 +2,12 @@ let gamesSection = document.querySelector('section.games__container');
 let descriptionSection = document.querySelector('section.game__active');
 let returnButton = document.querySelector('.btn__return')
 
+document.addEventListener("DOMContentLoaded", function backToMainPage() {
+  returnButton.addEventListener("click", function() {
+    hideDescription();
+    showGamesList()
+  });
+});
 
 function createGameTemplate(game) {
     let gameTemplate = document.createElement('div');
@@ -83,11 +89,11 @@ games.forEach(game => {
     gamesList.appendChild(template);
 });
 
-function backToMainPage() {
-  returnButton.addEventListener("click", function() {
-    hideDescription();
-    showGamesList()
-  });
-}
+// function backToMainPage() {
+//   returnButton.addEventListener("click", function() {
+//     hideDescription();
+//     showGamesList()
+//   });
+// }
 
-backToMainPage()
+// backToMainPage()
